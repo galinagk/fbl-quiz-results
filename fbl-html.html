@@ -1,0 +1,376 @@
+<!doctype html>
+<!--[if IE 8 ]>
+<html class="no-js ie8 lt-ie9" lang="ro" dir="ltr" xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <![endif]-->
+  <!--[if (gte IE 9)|!(IE)]><!-->
+  <html xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!--<![endif]-->
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="image/text">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0;">
+      <title>Quiz Results</title>
+      <style>
+      a {
+  text-decoration: none;
+  color: #428bca;
+}
+
+body,html {
+  font-family: 'Open Sans', Arial, Helvetica;
+  margin: 0;
+  padding: 0;
+}
+
+#pagewrapper {
+}
+
+.inner {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.col-half {
+  width: 48%;
+  float: left;
+  padding: 0 10px;
+}
+
+.col-third {
+  width: 30%;
+  float: left;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.message-section {
+  padding: 0 30px 30px 30px;
+  font-size: 25px;
+  line-height: 105%;
+  font-weight: 100;
+}
+
+.l-float {
+  float;left;
+}
+
+.blue {
+  color: #428bca;
+}
+
+.orange {
+  color: #f38400;
+}
+
+.red {
+  color: #f00;
+}
+
+.score-section {
+  background-position: 0 0;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.score {
+  font-size: 20px;
+  color: #454545;
+  text-align: center;
+}
+
+.loop-img {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  clear: both;
+}
+
+.row {
+  clear: both;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row.top-border {
+  border-top: 5px solid #eee;
+  clear: both;
+}
+
+h2 {
+  color: #428bca;
+  font-weight: 100;
+}
+
+a.resource-links {
+  display: table-cell;
+  width: 70%;
+  background: #acdcf9;
+  color: #3690c9;
+  text-align: center;
+  padding: 20px 50px;
+  font-size: 18px;
+  margin: 0 auto;
+  height: 72px;
+  white-space: normal;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 300ms ease-in 300ms;
+  -moz-transition: all 300ms ease-in 300ms;
+  -o-transition: all 300ms ease-in 300ms;
+  transition: all 300ms ease-in 300ms;
+  vertical-align: middle;
+}
+
+a.resource-links:hover {
+  background: #005789;
+  color: #ffffff;
+}
+
+.next-link-wrapper {
+  line-height: 39px;
+  text-align: center;
+  font-size: 22px;
+}
+
+a.next-link {
+  white-space: normal;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: all 300ms ease-in 300ms;
+  -moz-transition: all 300ms ease-in 300ms;
+  -o-transition: all 300ms ease-in 300ms;
+  transition: all 300ms ease-in 300ms;
+  vertical-align: middle;
+  height: 20px;
+  padding: 10px 30px;
+  background: #f38400;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+a.next-link:hover {
+  background: #acdcf9;
+}
+
+.centered {
+  text-align: center;
+}
+
+.next {
+  font-size: 20px;
+}
+
+.main-nav ul {
+  float: left;
+  list-style: none;
+  margin-top: 20px;
+}
+
+.main-nav ul li {
+  float: left;
+  margin: 0 10px;
+  font-size: 15px;
+}
+
+.main-nav ul li a {
+  text-transform: uppercase;
+  color: #000;
+}
+
+.main-nav ul li a:hover {
+  color: #428bca;
+}
+
+.logo {
+  float: left;
+  width: 300px;
+}
+
+.footer {
+  background: #a3a3a3;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer a {
+  color: #e3e3e3;
+}
+
+.footer a:hover {
+  color: #f38400;
+}
+
+@media only screen and (max-device-width: 800px) {
+  .col-half {
+    clear: both;
+    width: 85%;
+    float: none;
+    padding: 30px;
+  }
+
+  .col-third {
+    width: 100%;
+    margin: 15px;
+  }
+
+  .score {
+    position: relative;
+    margin: auto;
+    top: 0;
+    left: 0;
+    font-size: 28px;
+  }
+
+  a.resource-links {
+    display: block;
+    min-height: 15px;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    background: none;
+    border-bottom: 1px solid #eeeeee;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    text-align: left;
+  }
+
+  a.resource-links:hover {
+    color: #f38400;
+    background: none;
+  }
+
+  .main-nav ul li {
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 1em;
+  }
+
+  .main-nav ul {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-device-width: 800px) and (max-device-width: 980px) {
+  .col-third {
+    width: 30%;
+    margin: 10px;
+  }
+
+  a.resource-links {
+    display: table-cell;
+    min-height: 75px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    text-align: left;
+    padding: 5px 10px;
+    text-align: center;
+  }
+
+  a.resource-links:hover {
+    color: #f38400;
+    background: none;
+  }
+}
+
+
+      </style>
+    </head>
+    <body>
+      <div id="pagewrapper">
+        <div class="inner">
+          <img class="logo" src="http://feedbacklabs.org/wp-content/uploads/2014/11/feedbacklabs_logo_fblweb_165x120.png">
+          <div class="main-nav">
+              			<ul>
+              				<li><a href="http://feedbacklabs.org/who-we-are/" target="_blank">Who we are</a></li>
+              				<li><a href="http://feedbacklabs.org/what-we-do/" target="_blank">What we do</a></li>
+              				<li><a href="http://feedbacklabs.org/blog/" target="_blank">Our Blog</a></li>
+              				<li><a href="http://feedbacklabs.org/feedback-loops/" target="_blank">Feedback Loop</a></li>
+              				<li><a href="http://feedbacklabs.org/partner-with-us/" target="_blank">Partner With us</a></li>
+              			</ul>
+              		</div>
+
+
+        </div>
+        <!--header ends-->
+        <div class="row">
+          <div class="col-half">
+
+          <!-- temporary text in place of the chart-->
+          <span style=" margin:60px auto; background:#eee;display:block;">
+          Chart goes here:
+          light blue #acdcf9
+          bar blue #005789
+        </span>
+
+
+          </div>
+          <!-- 1st col ends-->
+          <div class="col-half">
+            <div class="message-section">
+              Congratulations! You're ahead of the pack (your fellow quiz-takers) in <span class="blue">Dialogue</span>, but could use the most improvement in <span class="orange">Course Correct</span>.
+            </div>
+            <div class="score-section">
+              <img class="loop-img" src="loop.png">
+            </div>
+            <div class="score"><span class="orange">Your overall score is 27 out of 100</span></div>
+            <p>Your overall score tells you how you're doing compared to the rest of the folks who have taken the quiz. To get this score, your individual step scores are weighted by the relative difficulty of each step, and then added together.</p>
+          </div>
+          <!--2nd col ends  -->
+        </div>
+        <!-- row ends-->
+        <div class="row top-border">
+          <div class="inner">
+            <h2>What do these results mean?</h2>
+            <p>Each bar refers to one step in the complete <a href="http://feedbacklabs.org/feedback-loops-steps/">feedback loop</a>. Your score is denoted by the blue bar. But this isn't just a simple strong and weak scale because the steps of the feedback loop are not equally easy. The <span class="red">red line</span> in each step represents the "benchmark," the average score of other organizations that have taken this Quiz, so you can see how your organization compares.
+              As you see here, for example, dialogue (with a community) and course correct (making decisions based on the feedback and evidence from a community) are much harder than collecting and analyzing.
+            </p>
+            <p>What's next? Check out tailored resources targeting your areas of improvement on the feedback loop.</p>
+          </div>
+        </div>
+        <!--row ends-->
+        <div class="row">
+          <div class="inner">
+            <div class="col-third">
+              <a class="resource-links" href="http://feedbacklabs.org/feedback-loops-steps/" target="_blank">What's a closed feedback loop?</a>
+            </div>
+            <div class="col-third">
+              <a href="http://feedbacklabs.org/our-results/" class="resource-links" target="_blank">How are we all doing at closing the feedback loop?</a>
+            </div>
+            <div class="col-third">
+              <a href="http://feedbacklabs.org/resource-library/?stages=buy-in,dialogue,collect,design,course%20correct,analyze" class="resource-links" target="_blank">My resources</a>
+            </div>
+          </div>
+        </div>
+        <!--row ends-->
+
+
+        <div class="row">
+          <div class="inner next-link-wrapper">
+          <a class="next-link" href="http://feedbacklabs.org/resource-library/?stages=buy-in,dialogue,collect,design,course%20correct,analyze">NEXT</a> See your personalized resources based on your score.
+        </div>
+
+        </div>
+
+
+      </div>
+      <!--page wrapper ends-->
+      <div class="footer">
+        © 2015 FeedbackLabs | 1110 Vermont Ave NW, Suite 500 Washington DC 20005  | E-mail: <a href="mailto:info@feedbacklabs.org">info@feedbacklabs.org<a/>
+      </div>
+<!--footer ends-->
+    </body>
+  </html>
